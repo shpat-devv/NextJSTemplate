@@ -4,6 +4,13 @@ import Header from "@/components/header/header";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import Image from "next/image";
 
+const menuItems = [
+  { title: "Home", link: "/" },
+  { title: "About", link: "/about" },
+  { title: "Services", link: "/services" },
+  { title: "Contact", link: "/contact" },
+];
+
 // Skeleton cards (from LayoutGridDemo)
 const SkeletonOne = () => (
   <div>
@@ -95,6 +102,7 @@ export default function Home() {
         title="Business Name"
         subtitle="Professional Services for Your Needs"
         buttonText="Menu"
+        menuItems={menuItems}
       />
       <div className="spacer"></div>
       <div className="introduction-text-center">
@@ -121,15 +129,6 @@ export default function Home() {
           Our Services
         </h2>
         <LayoutGrid cards={cards} />
-      </section>
-
-      <div className="spacer"></div>
-
-      <section className="max-w-3xl py-10 text-center">
-        <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-        <p className="text-gray-300">
-          Have questions or need a quote? We&apos;re here to help!
-        </p>
       </section>
 
       <div className="spacer"></div>

@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './header.module.css';
+import Menu from '@/components/menu/menu';
 
 interface HeaderProps {
     title: string;
     subtitle: string;
     buttonText: string;
-    onButtonClick?: () => void;
+    menuItems: { title: string; link: string }[];
 }
 
-const Header: React.FC<HeaderProps> = ({ title, subtitle, buttonText, onButtonClick }) => {
+const Header: React.FC<HeaderProps> = ({ title, subtitle, buttonText, menuItems }) => {
+    const [menuVisible, setMenuVisible] = useState(false);
+
     return (
         <header className={styles['main-header']}>
             <div className={styles['header-left']}>
@@ -18,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle, buttonText, onButtonCl
             <div className={styles['header-right']}>
                 <button
                     className={styles['menu-btn']}
-                    onClick={onButtonClick}
+                    onClick={() => setMenuVisible(!menuVisible)}
                 >
                     <span className={styles['icon']}>
                         <svg viewBox="0 0 175 80" width={40} height={40}>
@@ -29,6 +32,8 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle, buttonText, onButtonCl
                     </span>
                     <span className={styles['text']}>{buttonText}</span>
                 </button>
+                
+                <Menu items={menuItems} isVisible={menuVisible} />
             </div>
         </header>
     );
