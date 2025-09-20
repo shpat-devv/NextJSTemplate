@@ -7,8 +7,8 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen flex flex-col p-6">
       <Header
-        title="About Us"
-        subtitle="Learn more about our company"
+        title="Business Name"
+        subtitle="Let us know how we can help"
         buttonText="Contact Us"
         menuItems={[
           { title: "Home", link: "/" },
@@ -20,10 +20,7 @@ export default function AboutPage() {
      <div className="contact-page-content"> 
        <ContactForm />
      </div>
-      <div className="spacer"></div>
-      <footer className="mt-auto py-6 text-gray-500">
-        © 2025 Business Name — All rights reserved
-      </footer>
+
     </main>
   );
 }
