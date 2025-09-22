@@ -119,6 +119,15 @@
   margin-top: 50px;
   border: none;
 }
+
+.full-spacer {
+  background-color: var(--foreground);
+  height: 1px;
+  width: 100%;
+  margin-top: 50px;
+  border: none;
+}
+
 .introduction-text-center {
   display: flex;
   flex-direction: column;

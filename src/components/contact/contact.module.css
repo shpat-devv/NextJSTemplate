@@ -1,7 +1,4 @@
-/* From Uiverse.io by SelfMadeSystem */
-/*
-More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
- */
+/* Background animation from Uiverse.io by SelfMadeSystem */
 
 .container::after {
     content: "";
@@ -272,4 +269,55 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 
 .sendMessageBtn:hover {
     transform: translateY(-2px);
+}
+
+/* Mobile styles: make everything a bit smaller */
+@media (max-width: 500px) {
+    .container {
+        min-height: 90vh;
+    }
+    .form {
+        gap: 0.8em;
+        padding: 1em;
+        border-radius: 12px;
+        min-height: 55vh;
+        width: 35vh;
+        margin-top: 4vh;
+        margin-left: 3vh;
+    }
+
+    .formHeading {
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .formField {
+        width: 100%;
+        gap: 0.5em;
+        border-radius: 7px;
+        padding: 0.5em 0.7em;
+    }
+
+    .inputField {
+        font-size: 0.95em;
+        padding: 0.4em;
+    }
+
+    .sendMessageBtn {
+        width: 100%;
+        padding: 0.7em;
+        border-radius: 7px;
+        font-size: 0.95em;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .form {
+        width: 35vh;
+        padding: 0.8em;
+        min-height: 50vh;
+        margin-top: 3vh;
+        margin-left: -1vh;
+    }
 }

@@ -9,10 +9,12 @@ interface MenuProps {
 export default function Menu({ items, isVisible }: MenuProps) {
   return (
     <nav className={`${styles.menu} ${isVisible ? styles.visible : ''}`}>
-      <ul>
+      <ul className={styles.list}>
         {items.map(item => (
-          <li key={item.link}>
-            <Link href={item.link}>{item.title}</Link>
+          <li key={item.link} className={styles.item}>
+            <Link href={item.link} className={styles.link}>
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>

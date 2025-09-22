@@ -9,14 +9,14 @@ export default function AboutPage() {
       <Header
         title="Business Name"
         subtitle="Let us know how we can help"
-        buttonText="Contact Us"
+        buttonText="Menu"
         menuItems={[
           { title: "Home", link: "/" },
           { title: "About", link: "/about" },
           { title: "Contact", link: "/contact" },
         ]}
       />
-      <div className="spacer"></div>
+      <div className="full-spacer"></div>
      <div className="contact-page-content"> 
        <ContactForm />
      </div>
