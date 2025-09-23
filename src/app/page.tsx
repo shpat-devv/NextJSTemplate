@@ -5,7 +5,7 @@ import { LayoutGrid } from "@/components/ui/layout-grid";
 import Image from "next/image";
 
 const menuItems = [
-  { title: "Home", link: "/" },
+  { title: "Team", link: "/team" },
   { title: "Contact", link: "/contact" },
 ];
 
