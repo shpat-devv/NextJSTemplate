@@ -188,35 +188,48 @@
             426.5px 6480px;
     }
 }
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --c: #09f;
+    background-color: #000;
+    overflow: hidden;
+}
+
 .formWrapper {
     position: relative;
     z-index: 2;
-    max-width: 600px; 
-    width: 90%;       
+    max-width: 600px;
+    width: 90%;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: inherit;
-    gap: 1.2em;  
+    gap: 1.2em;
     padding: 2em;
     background-color: #000000;
     border-radius: 20px;
-    min-height: 70vh; 
+    min-height: 70vh;
     width: 100%;
     border: 1px solid #ffffff;
-    margin-top: 9vh;
-    margin-left: 10vh;
 }
 
 .formHeading {
-    font-size: 2em;  
+    font-size: 2em;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 1.5em;
@@ -225,7 +238,7 @@
 }
 
 .formField {
-    width: 85%; 
+    width: 85%;
     display: flex;
     align-items: center;
     gap: 0.8em;
@@ -253,7 +266,7 @@
 }
 
 .sendMessageBtn {
-    width: 85%; 
+    width: 85%;
     cursor: pointer;
     margin-top: 1em;
     padding: 1em;
@@ -271,19 +284,13 @@
     transform: translateY(-2px);
 }
 
-/* Mobile styles: make everything a bit smaller */
+/* Mobile adjustments */
 @media (max-width: 500px) {
-    .container {
-        min-height: 90vh;
-    }
     .form {
-        gap: 0.8em;
-        padding: 1em;
-        border-radius: 12px;
         min-height: 55vh;
-        width: 35vh;
-        margin-top: 4vh;
-        margin-left: 3vh;
+        padding: 1em;
+        gap: 0.8em;
+        border-radius: 12px;
     }
 
     .formHeading {
@@ -308,16 +315,5 @@
         padding: 0.7em;
         border-radius: 7px;
         font-size: 0.95em;
-    }
-}
-
-
-@media (max-width: 350px) {
-    .form {
-        width: 35vh;
-        padding: 0.8em;
-        min-height: 50vh;
-        margin-top: 3vh;
-        margin-left: -1vh;
     }
 }

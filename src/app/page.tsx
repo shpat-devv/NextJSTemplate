@@ -6,8 +6,6 @@ import Image from "next/image";
 
 const menuItems = [
   { title: "Home", link: "/" },
-  { title: "About", link: "/about" },
-  { title: "Services", link: "/services" },
   { title: "Contact", link: "/contact" },
 ];
 
@@ -114,7 +112,14 @@ export default function Home() {
           id="intro-image"
           className="rounded-lg mx-auto"
         />
-        <p id="intro-text" className="mt-4 text-gray-300 max-w-2xl mx-auto">
+        <p
+          id="intro-text"
+          className="mt-4 text-gray-300 max-w-2xl mx-auto"
+          style={{
+            fontSize: "clamp(1rem, 2vw, 1.2rem)",
+            lineHeight: "1.6",
+          }}
+        >
           Your trusted partner for all business needs. We provide top-notch
           services to help you succeed. Our team is dedicated to delivering
           exceptional results and making sure your experience is as seamless as

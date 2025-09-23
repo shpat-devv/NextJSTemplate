@@ -12,7 +12,6 @@ export default function AboutPage() {
         buttonText="Menu"
         menuItems={[
           { title: "Home", link: "/" },
-          { title: "About", link: "/about" },
           { title: "Contact", link: "/contact" },
         ]}
       />
