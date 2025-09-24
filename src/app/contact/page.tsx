@@ -13,6 +13,7 @@ export default function AboutPage() {
         menuItems={[
           { title: "Home", link: "/" },
           { title: "Team", link: "/team" },
+          { title: "Shop", link: "/shop" },
         ]}
       />
       <div className="full-spacer"></div>

@@ -14,6 +14,7 @@ export default function TeamPage() {
                 buttonText="Menu"
                 menuItems={[
                     { title: "Home", link: "/" },
+                    { title: "Shop", link: "/shop" },
                     { title: "Contact", link: "/contact" },
                 ]}
             />

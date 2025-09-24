@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const menuItems = [
   { title: "Team", link: "/team" },
+  { title: "Shop", link: "/shop" },
   { title: "Contact", link: "/contact" },
 ];
 
