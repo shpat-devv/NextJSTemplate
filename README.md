@@ -65,4 +65,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ![preview](./preview/home1.png)
 ![preview](./preview/home2.png)
+![preview](./preview/team.png)
+![preview](./preview/shop.png)
 ![preview](./preview/contact1.png)
