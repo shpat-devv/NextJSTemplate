@@ -2,10 +2,13 @@
     perspective: 1000px;
     width: 100%;
     height: 400px;
-    margin: 20px;
+    margin: 20px auto; 
     background: linear-gradient(315deg, #03a9f4, #ff0058);
     position: relative;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardWrapper::before {
@@ -22,8 +25,9 @@
 
 .card {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 90%;       
+    max-width: 350px; 
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +39,7 @@
     position: relative;
     z-index: 3;
     height: 70%;       
-    width: 85%;         
+    width: 100%;       
     object-fit: cover;
     border-radius: 10px;
     opacity: 0.95;
@@ -78,7 +82,7 @@
     color: #ddd;
     font-size: 0.9em;
     line-height: 1.4em;
-    margin-top: 8px;   /* pulled closer */
+    margin-top: 8px;   
 }
 
 .socialIcons {
@@ -86,7 +90,51 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 10px;  /* reduced spacing */
+    margin-top: 10px;  
     padding: 0;
     list-style: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 500px) {
+    .cardWrapper {
+        height: auto;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 15px;
+    }
+
+    .cardWrapper::before {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        justify-content: center;
+    }
+
+    .cardImage {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 15px;
+        opacity: 1;
+        transform: none !important;
+        transition: none;
+    }
+
+    .card .content {
+        margin-top: 15px;
+        margin-bottom: 0;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .socialIcons {
+        margin-top: 12px;
+        gap: 10px;
+    }
 }
